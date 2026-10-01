@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Préstamos Tech</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span></div>
+<div id="dot"></div><div id="ring"></div>
+<svg width="0" height="0"><filter id="goo"><feGaussianBlur stdDeviation="8"/><feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"/></filter></svg>
+
+<main>
+  <header class="glass">
+    <h1>💻 Préstamos Tech</h1>
+    <p>Gestión de equipos tecnológicos · Universidad</p>
+  </header>
+
+  <section class="grid">
+    <article class="glass">
+      <h2>Equipos</h2>
+      <ul id="equipos"></ul>
+    </article>
+
+    <article class="glass">
+      <h2>Solicitar préstamo</h2>
+      <div class="form">
+        <input id="ident" placeholder="Identificación">
+        <select id="tipo"><option>ESTUDIANTE</option><option>DOCENTE</option></select>
+        <select id="equipo"></select>
+        <label>Fecha de préstamo<input type="date" id="f1"></label>
+        <label>Fecha prevista de devolución<input type="date" id="f2"></label>
+        <button class="squishy" id="btnSolicitar">Enviar solicitud</button>
+      </div>
+    </article>
+
+    <article class="glass wide">
+      <h2>Solicitudes y préstamos</h2>
+      <ul id="solicitudes"></ul>
+    </article>
+  </section>
+</main>
+<div id="toast" class="glass"></div>
+<script src="script.js"></script>
+</body>
+</html>
